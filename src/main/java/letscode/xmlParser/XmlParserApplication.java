@@ -9,5 +9,4 @@ public class XmlParserApplication {
 	public static void main(String[] args) {
 		SpringApplication.run(XmlParserApplication.class, args);
 	}
-
 }
