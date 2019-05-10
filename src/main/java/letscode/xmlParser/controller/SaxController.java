@@ -2,8 +2,10 @@ package letscode.xmlParser.controller;
 
 import letscode.xmlParser.sax_parser.Employee;
 import letscode.xmlParser.sax_parser.MyHandler;
+import letscode.xmlParser.service.XmlParser;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 import org.xml.sax.SAXException;
@@ -19,9 +21,16 @@ import java.util.List;
 @RequestMapping("sax")
 public class SaxController {
 
-    List<Employee> empList;
+    private final XmlParser xmlParser;
+
+    private List<Employee> empList;
 
     final private String FILE_PATH = "src\\main\\resources\\employees.xml";
+
+    @Autowired
+    public SaxController(@Qualifier("staxService") XmlParser xmlParser) {
+        this.xmlParser = xmlParser;
+    }
 
     @GetMapping
     public List<Employee> getList() {

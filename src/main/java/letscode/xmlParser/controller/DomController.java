@@ -41,7 +41,8 @@ public class DomController {
             doc.getDocumentElement().normalize();
             System.out.println("Root element :" + doc.getDocumentElement().getNodeName());
             NodeList nodeList = doc.getElementsByTagName("Employee");
-            //now XML is loaded as Document in memory, lets convert it to Object List
+            //XML is loaded as Document in memory
+            // convert it to Object List
             empList = new ArrayList();
             for (int i = 0; i < nodeList.getLength(); i++) {
                 empList.add(getEmployee(nodeList.item(i)));
@@ -63,7 +64,6 @@ public class DomController {
             emp.setGender(getTagValue("gender", element));
             emp.setRole(getTagValue("role", element));
         }
-
         return emp;
     }
 

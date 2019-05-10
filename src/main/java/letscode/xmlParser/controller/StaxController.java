@@ -42,7 +42,7 @@ public class StaxController {
                 XMLEvent xmlEvent = xmlEventReader.nextEvent();
                 if (xmlEvent.isStartElement()){
                     StartElement startElement = xmlEvent.asStartElement();
-                    if(startElement.getName().getLocalPart().equals("Employee")){
+                    if ("Employee".equals(startElement.getName().getLocalPart())){
                         emp = new Employee();
                         //Get the 'id' attribute from Employee element
                         Attribute idAttr = startElement.getAttributeByName(new QName("id"));
