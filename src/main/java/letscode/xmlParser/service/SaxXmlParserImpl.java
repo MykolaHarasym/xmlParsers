@@ -1,7 +1,7 @@
 package letscode.xmlParser.service;
 
 import letscode.xmlParser.entity.Employee;
-import letscode.xmlParser.sax_parser.MyHandler;
+import letscode.xmlParser.sax_handler.MyHandler;
 import org.xml.sax.SAXException;
 
 import javax.xml.parsers.ParserConfigurationException;

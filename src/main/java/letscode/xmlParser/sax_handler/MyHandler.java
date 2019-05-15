@@ -1,4 +1,4 @@
-package letscode.xmlParser.sax_parser;
+package letscode.xmlParser.sax_handler;
 
 import java.util.ArrayList;
 import java.util.List;
