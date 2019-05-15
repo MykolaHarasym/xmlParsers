@@ -1,4 +1,4 @@
-package letscode.xmlParser.sax_parser;
+package letscode.xmlParser.entity;
 
 public class Employee {
     private int id;

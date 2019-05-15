@@ -1,8 +1,10 @@
 package letscode.xmlParser.service;
 
-import org.springframework.web.multipart.MultipartFile;
+import letscode.xmlParser.entity.Employee;
+
+import java.util.List;
 
 public interface XmlParser {
 
-    void parse(MultipartFile multipartFile);
+    List<Employee> parse();
 }

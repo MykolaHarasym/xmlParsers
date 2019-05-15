@@ -3,6 +3,7 @@ package letscode.xmlParser.sax_parser;
 import java.util.ArrayList;
 import java.util.List;
 
+import letscode.xmlParser.entity.Employee;
 import org.xml.sax.Attributes;
 import org.xml.sax.SAXException;
 import org.xml.sax.helpers.DefaultHandler;
